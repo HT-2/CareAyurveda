@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-green: #194229;
+  --accent-green: #228B22;
+  --light-green: #cde8da;
+  --yellow-green: #bcbd5a;
+  --soft-bg: #f8faf8;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 150 40% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 150 40% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 40% 15%;
+    --primary: 147 45% 18%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 140 20% 90%;
+    --secondary-foreground: 150 40% 15%;
+    --muted: 140 20% 96%;
+    --muted-foreground: 150 20% 40%;
+    --accent: 140 20% 90%;
+    --accent-foreground: 150 40% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 140 20% 85%;
+    --input: 140 20% 85%;
+    --ring: 147 45% 18%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 150 40% 10%;
+    --foreground: 0 0% 98%;
+    --card: 150 40% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 150 40% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 147 45% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 150 30% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 150 30% 20%;
+    --muted-foreground: 150 20% 60%;
+    --accent: 150 30% 20%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 150 30% 20%;
+    --input: 150 30% 20%;
+    --ring: 147 45% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #194229;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0f2a1a;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-count-up {
+  animation: countUp 0.8s ease-out forwards;
+}
